@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f2f2f2;
+    font-family: 'Oswald', sans-serif;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 20vw 80vw;
+    grid-template-rows: 13vh 20vh 20vh 47vh;
+    grid-template-areas:
+        "intro title"
+        "contact pres"
+        "lang stack"
+        "skills bot";
+    max-width: 100%;
+    min-height: 100vh;
+}
+/* LEFT SECTION 1 - Intro */
+.intro-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    grid-area: intro;
+    padding: 20px;
+}
+.intro-container p {
+    text-align: center; 
+}
+
+.intro-container img {
+    align-self: flex-start;
+    margin-right: 50px; 
+}
+
+
+/* RIGHT SECTION 1 - Title */
+.title-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: larger;
+    font-weight: 700;
+    align-items: center;
+    grid-area: title;
+    padding: .5rem;
+}
+
+/* LEFT SECTION 2 - Contact */
+.contact-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: contact;
+    padding: .5rem;
+}
+.contact-container span.title {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+.contact-container p {
+    display:flex;
+    justify-content: center;
+    margin-bottom: .25rem;
+}
+.contact-container a {
+    text-decoration: none; 
+    color: inherit; 
+    transition: color 0.3s; 
+
+}
+
+.contact-container a:hover {
+    color: #0078d4;
+}
+.contact-container .h-list {
+    list-style: none; 
+    display: flex; 
+    gap: 3rem; 
+}
+.contact-container .h-list li {
+    flex: 1;
+}
+/* RIGHT SECTION 2 - Presentation */
+.pres-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /* Center both divs horizontally */
+    grid-area: pres;
+    padding: .5rem;
+}
+
+/* Left div with 25% width */
+.pres-container .about {
+    width: 25%;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pres-container .about span.title {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+.pres-container .about .list {
+    list-style: none; 
+    display: flex; 
+    flex-direction: column;
+    gap: .75rem;
+}
+/* Right div occupies the remaining width */
+.pres-container .pres {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pres-container .pres span.title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+/* LEFT SECTION 3 - Languages */
+.lang-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: lang;
+    padding: .5rem;
+}
+.lang-container .h-list {
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    justify-content: space-around;
+}
+.lang-container .h-list li {
+    margin: 0;
+}
+.lang-container .h-list img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0;
+}
+/* RIGHT SECTION 3 - Stack */
+.stack-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    grid-area: stack;
+    padding: .5rem;
+}
+.stack-container span.title {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+.stack-container .h-list {
+    list-style: none;
+    display: flex;
+    gap: .5rem;
+    justify-content: space-around;
+}
+.stack-container .h-list li {
+    margin: 0;
+}
+.stack-container .h-list img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0;
+}
+.stack-container .tools {
+        width: 25%;
+        padding-right: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+}
+.stack-container .stack {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+}
+/* LEFT SECTION 4 - Soft Skills */
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: skills;
+    padding: 1rem;
+}
+.skills-container .list {
+    list-style: none;
+}
+.skills-container .list li {
+    font-size: 1.2rem;
+    margin: .5rem;
+}
+/* RIGHT SECTION 4 - Work, Formations, Hobbies */
+.bot-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    align-items: stretch;
+    grid-area: bot;
+    padding: 2rem;
+}
+.bot-container .work {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.bot-container .work .xp {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.bot-container .work .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+.bot-container .hobbies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.bot-container .work .h-list,
+.bot-container .hobbies .h-list {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+.bot-container .work .h-list li,
+.bot-container .hobbies .h-list li {
+    flex: 1; 
+    justify-content: space-around;
+}
+/* Add section backgrounds and borders */
+.intro-container, .title-container, .contact-container, .pres-container, .lang-container, .stack-container, .skills-container, .bot-container {
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
